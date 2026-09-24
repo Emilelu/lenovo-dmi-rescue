@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ---------------------------------------------------------------------------
+# NEVER commit firmware dumps.
+#
+# A SPI image contains the machine's serial number, MTM, UUID, the Windows
+# product key, Wi-Fi pairings and a pile of boot history.  Anything matching
+# the patterns below stays local.
+# ---------------------------------------------------------------------------
+*.bin
+*.rom
+*.fd
+*.cap
+dump*.bin
+*_dump.bin
+*.spi
+LvarDump.bin
+
+# keep small synthetic fixtures used by the test suite
+!tests/data/*.synthetic.bin
+
+# local scratch
+*.local.*
+scratch/
+out/

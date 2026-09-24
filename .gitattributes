@@ -1,0 +1,15 @@
+# Source and docs stay LF.  The UEFI scripts this project *generates* are CRLF
+# at runtime (see lenovo_dmi_rescue/uefi.py) -- that is a byte level requirement
+# of the shell, not a checkout setting, so it is deliberately not encoded here
+# for anything except real batch files.
+* text=auto eol=lf
+
+*.nsh text eol=crlf
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
+# Firmware images are binary and must never be normalised.
+*.bin binary
+*.rom binary
+*.fd binary
+*.cap binary
